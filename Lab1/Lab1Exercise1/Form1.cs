@@ -12,9 +12,6 @@ namespace Lab1Exercise1
 {
     public partial class Form1 : Form
     {
-        public int X;
-        public int Y;
-
         public Form1()
         {
             InitializeComponent();
