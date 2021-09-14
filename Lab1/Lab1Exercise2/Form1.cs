@@ -23,17 +23,17 @@ namespace Lab1Exercise2
             buttonDe.Click += ButtonDe_Click;
             buttonAverage.Click += ButtonAverage_Click;
             System.Timers.Timer aTimer = new System.Timers.Timer(100);
-            //aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Enabled = true;
         }
-        // private void OnTimedEvent(object source, ElapsedEventArgs e)
-        //{
-        //    UpdateQueue();
-        //}
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            UpdateQueue();
+        }
 
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
-            Int32 sum = 0;
+            decimal sum = 0;
             decimal average = 0;
 
             if (dataQueue.Count < Convert.ToInt32(textBox4.Text))
@@ -49,6 +49,7 @@ namespace Lab1Exercise2
                 average = sum / Convert.ToInt32(textBox4.Text);
                 textBox5.Text = average.ToString();
             }
+            UpdateQueue();
         }
 
         private void ButtonDe_Click(object sender, EventArgs e)

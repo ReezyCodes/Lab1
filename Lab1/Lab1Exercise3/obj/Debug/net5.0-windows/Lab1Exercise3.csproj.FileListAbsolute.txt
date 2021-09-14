@@ -1,0 +1,17 @@
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\bin\Debug\net5.0-windows\Lab1Exercise3.exe
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\bin\Debug\net5.0-windows\Lab1Exercise3.deps.json
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\bin\Debug\net5.0-windows\Lab1Exercise3.runtimeconfig.json
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\bin\Debug\net5.0-windows\Lab1Exercise3.runtimeconfig.dev.json
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\bin\Debug\net5.0-windows\Lab1Exercise3.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\bin\Debug\net5.0-windows\ref\Lab1Exercise3.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\bin\Debug\net5.0-windows\Lab1Exercise3.pdb
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.Form1.resources
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.csproj.GenerateResource.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.AssemblyInfoInputs.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.AssemblyInfo.cs
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.csproj.CoreCompileInputs.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\ref\Lab1Exercise3.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.pdb
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.genruntimeconfig.cache

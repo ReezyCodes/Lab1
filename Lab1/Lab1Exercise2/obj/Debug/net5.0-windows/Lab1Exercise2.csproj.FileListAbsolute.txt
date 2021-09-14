@@ -16,3 +16,20 @@ C:\Users\Raul Pinzon\Source\Repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\n
 C:\Users\Raul Pinzon\Source\Repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\ref\Lab1Exercise2.dll
 C:\Users\Raul Pinzon\Source\Repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.pdb
 C:\Users\Raul Pinzon\Source\Repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.genruntimeconfig.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\bin\Debug\net5.0-windows\Lab1Exercise2.exe
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\bin\Debug\net5.0-windows\Lab1Exercise2.deps.json
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\bin\Debug\net5.0-windows\Lab1Exercise2.runtimeconfig.json
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\bin\Debug\net5.0-windows\Lab1Exercise2.runtimeconfig.dev.json
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\bin\Debug\net5.0-windows\Lab1Exercise2.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\bin\Debug\net5.0-windows\ref\Lab1Exercise2.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\bin\Debug\net5.0-windows\Lab1Exercise2.pdb
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.Form1.resources
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.csproj.GenerateResource.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.AssemblyInfoInputs.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.AssemblyInfo.cs
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.csproj.CoreCompileInputs.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\ref\Lab1Exercise2.dll
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.pdb
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.genruntimeconfig.cache
