@@ -22,14 +22,14 @@ namespace Lab1Exercise1
 
         private void PictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            txtClick.AppendText("(" + e.X.ToString("000") + ", " + e.Y.ToString("000")+ ")");
+            txtClick.AppendText("(" + e.X.ToString() + ", " + e.Y.ToString()+ ")");
             txtClick.AppendText(Environment.NewLine);
         }
 
         private void PictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            txtXPos.Text = e.X.ToString("000");
-            txtYPos.Text = e.Y.ToString("000");
+            txtXPos.Text = e.X.ToString();
+            txtYPos.Text = e.Y.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
