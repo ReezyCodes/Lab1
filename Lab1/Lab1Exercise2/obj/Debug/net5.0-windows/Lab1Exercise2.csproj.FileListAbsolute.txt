@@ -33,3 +33,4 @@ C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-w
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\ref\Lab1Exercise2.dll
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.pdb
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.genruntimeconfig.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise2\obj\Debug\net5.0-windows\Lab1Exercise2.csproj.AssemblyReference.cache

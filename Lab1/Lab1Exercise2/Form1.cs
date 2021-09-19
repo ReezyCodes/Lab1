@@ -22,9 +22,6 @@ namespace Lab1Exercise2
             buttonEn.Click += ButtonEn_Click;
             buttonDe.Click += ButtonDe_Click;
             buttonAverage.Click += ButtonAverage_Click;
-            System.Timers.Timer aTimer = new System.Timers.Timer(100);
-            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Enabled = true;
         }
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
@@ -34,11 +31,15 @@ namespace Lab1Exercise2
         private void ButtonAverage_Click(object sender, EventArgs e)
         {
             decimal sum = 0;
-            decimal average = 0;
+            decimal average;
 
             if (dataQueue.Count < Convert.ToInt32(textBox4.Text))
             {
-                MessageBox.Show("Bruh");
+                MessageBox.Show("Not enough values in queue");
+            }
+            else if (dataQueue.Count == 0)
+            {
+                MessageBox.Show("Nothing in the queue");
             }
             else
             {
@@ -56,11 +57,11 @@ namespace Lab1Exercise2
         {
             if (dataQueue.Count > 0)
             {
-                dataQueue.Dequeue();
+                textBox2.Text = dataQueue.Dequeue().ToString();
             }
             else
                 {
-                MessageBox.Show("Bruh");
+                MessageBox.Show("Nothing to dequeue");
             }
             UpdateQueue();
         }
@@ -69,6 +70,7 @@ namespace Lab1Exercise2
         {
             dataQueue.Enqueue(Convert.ToInt32(textBox1.Text));
             UpdateQueue();
+            textBox1.Clear();
 
         }
 
@@ -80,6 +82,11 @@ namespace Lab1Exercise2
             {
                 textBox6.AppendText(item.ToString() + ", ");
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            UpdateQueue();
         }
     }
 }

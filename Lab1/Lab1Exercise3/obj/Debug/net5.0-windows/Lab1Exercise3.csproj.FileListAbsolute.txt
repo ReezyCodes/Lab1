@@ -15,3 +15,4 @@ C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-w
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\ref\Lab1Exercise3.dll
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.pdb
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.genruntimeconfig.cache
+C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Lab1Exercise3\obj\Debug\net5.0-windows\Lab1Exercise3.csproj.AssemblyReference.cache
