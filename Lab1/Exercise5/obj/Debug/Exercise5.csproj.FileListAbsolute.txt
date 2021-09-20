@@ -8,3 +8,13 @@ C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise5.cs
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise4.1.exe
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise4.1.pdb
 C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise5.csproj.AssemblyReference.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\bin\Debug\Exercise4.1.exe.config
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\bin\Debug\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\bin\Debug\Exercise4.1.pdb
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise5.csproj.AssemblyReference.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise5.Form1.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise5.Properties.Resources.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise5.csproj.GenerateResource.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise5.csproj.CoreCompileInputs.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise5\obj\Debug\Exercise4.1.pdb
