@@ -1,22 +1,23 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO.Ports;
-using System.Collections.Concurrent;
 
-namespace Exercise4._1
+namespace Exercise5
 {
     public partial class Form1 : Form
     {
-        string serialDataString;
-        SerialPort _serialPort = new SerialPort("COM3", 9600, Parity.None, 8, StopBits.One);
+        string serialDataString = "";
+        SerialPort _serialPort = new SerialPort();
         ConcurrentQueue<Int32> dataQueue = new ConcurrentQueue<Int32>();
+        string nextByte;
 
         public Form1()
         {
@@ -52,7 +53,6 @@ namespace Exercise4._1
             }
             this.timer1.Enabled = true;
         }
-
         private void serialPort_DataReceived()
         {
             int newByte;
@@ -62,8 +62,32 @@ namespace Exercise4._1
             {
                 newByte = _serialPort.ReadByte();
                 serialDataString = serialDataString + newByte.ToString() + ", ";
-                dataQueue.Enqueue(Convert.ToInt32(newByte));
-                bytesToRead = _serialPort.BytesToRead;
+                if (newByte == 255)
+                {
+                    textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
+                    nextByte = "Ax";
+                }
+                else if (nextByte == "Ax")
+                {
+                    textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
+                    dataQueue.Enqueue(Convert.ToInt32(newByte));
+                    textBoxAx.Text = newByte.ToString();
+                    nextByte = "Ay";
+                }
+                else if (nextByte == "Ay")
+                {
+                    textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
+                    dataQueue.Enqueue(Convert.ToInt32(newByte));
+                    textBoxAy.Text = newByte.ToString();
+                    nextByte = "Az";
+                }
+                else if (nextByte == "Az")
+                {
+                    textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
+                    dataQueue.Enqueue(Convert.ToInt32(newByte));
+                    textBoxAz.Text = newByte.ToString();
+                    nextByte = "Reset";
+                }
             }
 
         }
@@ -77,13 +101,6 @@ namespace Exercise4._1
                 textBoxTempStringLength.Text = serialDataString.Length.ToString();
                 textBoxItemsQueue.Text = dataQueue.Count.ToString();
                 serialDataString = "";
-                int byteOut;
-                int bytesToRead;
-                bytesToRead = _serialPort.BytesToRead;
-                while (dataQueue.TryDequeue(out byteOut) == true)
-                {
-                    textBoxSerialDataStream.AppendText(byteOut.ToString() + ", ");
-                }
             }
         }
     }

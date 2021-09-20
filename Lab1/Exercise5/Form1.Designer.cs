@@ -1,5 +1,5 @@
 ﻿
-namespace Exercise4._1
+namespace Exercise5
 {
     partial class Form1
     {
@@ -40,6 +40,12 @@ namespace Exercise4._1
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxAx = new System.Windows.Forms.TextBox();
+            this.textBoxAy = new System.Windows.Forms.TextBox();
+            this.textBoxAz = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -76,7 +82,7 @@ namespace Exercise4._1
             // 
             // textBoxSerialDataStream
             // 
-            this.textBoxSerialDataStream.Location = new System.Drawing.Point(12, 218);
+            this.textBoxSerialDataStream.Location = new System.Drawing.Point(12, 170);
             this.textBoxSerialDataStream.Multiline = true;
             this.textBoxSerialDataStream.Name = "textBoxSerialDataStream";
             this.textBoxSerialDataStream.Size = new System.Drawing.Size(298, 220);
@@ -112,7 +118,7 @@ namespace Exercise4._1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 202);
+            this.label4.Location = new System.Drawing.Point(9, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 9;
@@ -120,7 +126,56 @@ namespace Exercise4._1
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 414);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Ax";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(232, 414);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Az";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(123, 414);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Ay";
+            // 
+            // textBoxAx
+            // 
+            this.textBoxAx.Location = new System.Drawing.Point(34, 411);
+            this.textBoxAx.Name = "textBoxAx";
+            this.textBoxAx.Size = new System.Drawing.Size(53, 20);
+            this.textBoxAx.TabIndex = 14;
+            // 
+            // textBoxAy
+            // 
+            this.textBoxAy.Location = new System.Drawing.Point(148, 411);
+            this.textBoxAy.Name = "textBoxAy";
+            this.textBoxAy.Size = new System.Drawing.Size(53, 20);
+            this.textBoxAy.TabIndex = 15;
+            // 
+            // textBoxAz
+            // 
+            this.textBoxAz.Location = new System.Drawing.Point(257, 411);
+            this.textBoxAz.Name = "textBoxAz";
+            this.textBoxAz.Size = new System.Drawing.Size(53, 20);
+            this.textBoxAz.TabIndex = 16;
             // 
             // comboBox1
             // 
@@ -128,7 +183,7 @@ namespace Exercise4._1
             this.comboBox1.Location = new System.Drawing.Point(12, 16);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
+            this.comboBox1.TabIndex = 17;
             // 
             // Form1
             // 
@@ -136,6 +191,12 @@ namespace Exercise4._1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBoxAz);
+            this.Controls.Add(this.textBoxAy);
+            this.Controls.Add(this.textBoxAx);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -164,6 +225,12 @@ namespace Exercise4._1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxAx;
+        private System.Windows.Forms.TextBox textBoxAy;
+        private System.Windows.Forms.TextBox textBoxAz;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }
