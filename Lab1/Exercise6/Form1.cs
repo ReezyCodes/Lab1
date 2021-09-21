@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO.Ports;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace Exercise6
         ConcurrentQueue<Int32> dataQueue = new ConcurrentQueue<Int32>();
         ConcurrentQueue<Int32> moveQueue = new ConcurrentQueue<Int32>();
         int nextByte;
+        StreamWriter outputfile;
 
         public Form1()
         {
@@ -76,6 +78,8 @@ namespace Exercise6
                     textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                     moveQueue.Enqueue(Convert.ToInt32(newByte));
                     textBoxAx.Text = newByte.ToString();
+                    if (checkBox1.Checked == true)
+                        outputfile.Write(textBoxAx.Text + ",");
                     nextByte = 2;
                 }
                 else if (nextByte == 2)
@@ -85,6 +89,8 @@ namespace Exercise6
                     textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                     moveQueue.Enqueue(Convert.ToInt32(newByte));
                     textBoxAy.Text = newByte.ToString();
+                    if (checkBox1.Checked == true)
+                        outputfile.Write(textBoxAy.Text + ",");
                     nextByte = 3;
                 }
                 else if (nextByte == 3)
@@ -94,6 +100,8 @@ namespace Exercise6
                     textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                     moveQueue.Enqueue(Convert.ToInt32(newByte));
                     textBoxAz.Text = newByte.ToString();
+                    if (checkBox1.Checked == true)
+                        outputfile.Write(textBoxAz.Text + "," + DateTime.Now.ToString("hh.mm.ss.ffffff") + "\n");
                     nextByte = 0;
                 }
                 bytesToRead = _serialPort.BytesToRead;
@@ -114,6 +122,25 @@ namespace Exercise6
                 {
                 }
             }
+        }
+
+        private void buttonFilename_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.InitialDirectory = @"C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise6\bin\Debug\Files";
+            saveFileDialog1.ShowDialog();
+            textBoxFilename.Text = saveFileDialog1.FileName.ToString() + ".CSV";
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                outputfile = new StreamWriter(textBoxFilename.Text);
+            }
+            else
+                outputfile.Close();
         }
     }
 }

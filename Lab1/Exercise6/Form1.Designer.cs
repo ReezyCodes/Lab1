@@ -49,8 +49,8 @@ namespace Exercise6
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBoxOrientation = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonFilename = new System.Windows.Forms.Button();
+            this.textBoxFilename = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxBytesToRead
@@ -221,32 +221,34 @@ namespace Exercise6
             this.checkBox1.TabIndex = 19;
             this.checkBox1.Text = "Save to File";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button1
+            // buttonFilename
             // 
-            this.button1.Location = new System.Drawing.Point(24, 838);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 38);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Select Filename";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonFilename.Location = new System.Drawing.Point(24, 838);
+            this.buttonFilename.Name = "buttonFilename";
+            this.buttonFilename.Size = new System.Drawing.Size(238, 38);
+            this.buttonFilename.TabIndex = 20;
+            this.buttonFilename.Text = "Select Filename";
+            this.buttonFilename.UseVisualStyleBackColor = true;
+            this.buttonFilename.Click += new System.EventHandler(this.buttonFilename_Click);
             // 
-            // textBox1
+            // textBoxFilename
             // 
-            this.textBox1.Location = new System.Drawing.Point(325, 838);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 35);
-            this.textBox1.TabIndex = 21;
+            this.textBoxFilename.Location = new System.Drawing.Point(325, 838);
+            this.textBoxFilename.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxFilename.Multiline = true;
+            this.textBoxFilename.Name = "textBoxFilename";
+            this.textBoxFilename.Size = new System.Drawing.Size(292, 35);
+            this.textBoxFilename.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 888);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxFilename);
+            this.Controls.Add(this.buttonFilename);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBoxOrientation);
             this.Controls.Add(this.comboBox1);
@@ -294,8 +296,8 @@ namespace Exercise6
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBoxOrientation;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonFilename;
+        private System.Windows.Forms.TextBox textBoxFilename;
     }
 }
 
