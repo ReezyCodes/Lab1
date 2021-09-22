@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab1Exercise1", "Lab1Exercise1\Lab1Exercise1.csproj", "{4C2E2EAF-5324-4CA4-B30D-B9CF13920B9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise1", "Lab1Exercise1\Exercise1.csproj", "{4C2E2EAF-5324-4CA4-B30D-B9CF13920B9D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab1Exercise2", "Lab1Exercise2\Lab1Exercise2.csproj", "{E66019FF-3A1B-4854-9E98-EB0CB915DB8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise2", "Lab1Exercise2\Exercise2.csproj", "{E66019FF-3A1B-4854-9E98-EB0CB915DB8D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab1Exercise3", "Lab1Exercise3\Lab1Exercise3.csproj", "{F5BB20B0-26E4-4144-9200-EBE8EFC3DA92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise3", "Lab1Exercise3\Exercise3.csproj", "{F5BB20B0-26E4-4144-9200-EBE8EFC3DA92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise4.1", "Exercise4.1\Exercise4.1.csproj", "{018B891D-B0A1-4422-81DA-81DF87CD9CA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise4", "Exercise4.1\Exercise4.csproj", "{018B891D-B0A1-4422-81DA-81DF87CD9CA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise5", "Exercise5\Exercise5.csproj", "{2ADE03CC-AED5-4E95-A688-AF804F249537}"
 EndProject

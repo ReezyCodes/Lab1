@@ -128,7 +128,7 @@ namespace Exercise6
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-            saveFileDialog1.InitialDirectory = @"C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise6\bin\Debug\Files";
+            saveFileDialog1.InitialDirectory = @"C:\Users\Home\source\repos\ReezyCodes\Lab1\Lab1\Exercise6\bin\Debug\Files";
             saveFileDialog1.ShowDialog();
             textBoxFilename.Text = saveFileDialog1.FileName.ToString() + ".CSV";
         }
