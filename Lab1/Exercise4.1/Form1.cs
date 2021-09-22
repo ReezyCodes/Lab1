@@ -14,7 +14,7 @@ namespace Exercise4._1
 {
     public partial class Form1 : Form
     {
-        string serialDataString;
+        string serialDataString = "";
         SerialPort _serialPort = new SerialPort();
         ConcurrentQueue<Int32> dataQueue = new ConcurrentQueue<Int32>();
 
