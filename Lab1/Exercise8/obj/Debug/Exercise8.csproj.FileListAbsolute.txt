@@ -1,0 +1,10 @@
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\bin\Debug\Exercise4.1.exe.config
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\bin\Debug\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\bin\Debug\Exercise4.1.pdb
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Debug\Exercise8.csproj.AssemblyReference.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Debug\Exercise8.Form1.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Debug\Exercise8.Properties.Resources.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Debug\Exercise8.csproj.GenerateResource.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Debug\Exercise8.csproj.CoreCompileInputs.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Debug\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Debug\Exercise4.1.pdb
