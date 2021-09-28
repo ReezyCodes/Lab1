@@ -42,22 +42,22 @@ namespace Exercise8
             int Ax = Convert.ToInt32(textBoxAx.Text);
             int Ay = Convert.ToInt32(textBoxAy.Text);
             int Az = Convert.ToInt32(textBoxAz.Text);
-            if (Ax >= 180 && wait1 == 0 && wait2 == 0)
+            if (Ax >= 160 && wait1 == 0 && wait2 == 0 && wait3 == 0)
             {
                 state = 1;
-                wait1 = 10;
+                wait1 = 5;
             }
             else if (state == 1)
             {
                 wait1--;
-                if (Ay >= 180)
+                if (Ay >= 160)
                 {
                     state = 3;
-                    wait2 = 10;
+                    wait2 = 5;
                 }
                 else if (wait1 == 0)
                 {
-                    MessageBox.Show("Jab");
+                    textBoxState.Text = "Jab";
                     state = 0;
                     wait1 = 0;
                 }
@@ -66,41 +66,46 @@ namespace Exercise8
             else if (state == 3)
             {
                 wait2--;
-                if (Az >= 180)
+                if (Az >= 150)
                 {
-                    MessageBox.Show("Right-Hook");
+                    textBoxState.Text= "Right-Hook";
                     state = 0;
                     wait1 = 0;
                     wait2 = 0;
+                    wait3 = 0;
                 }
                 else if (wait2 == 0)
                 {
                     state = 0;
                     wait1 = 0;
                     wait2 = 0;
+                    wait3 = 0;
                 }
             }
-            else if (Az >= 180)
+            else if (Ay >= 180 && wait1 == 0 && wait2 == 0 && wait3 == 0)
             {
                 state = 2;
-                wait3 = 10;
+                wait3 = 5;
             }
             else if (state == 2)
             {
                 wait3--;
-                if (Ax >= 180)
+                if (Ax >= 150)
                 {
-                    MessageBox.Show("Uppercut");
+                    textBoxState.Text = "High punch";
                     state = 0;
+                    wait1 = 0;
+                    wait2 = 0;
                     wait3 = 0;
                 }
                 else if (wait3 == 0)
                 {
                     state = 0;
+                    wait1 = 0;
+                    wait2 = 0;
                     wait3 = 0;
                 }
             }
-            textBoxState.Text = state.ToString();
             textBoxSerialDataStream.AppendText("(" + Ax.ToString() + ", " + Ay.ToString() + ", " + Az.ToString() + ", " + state.ToString() + ")" + ", ");
         }
 
