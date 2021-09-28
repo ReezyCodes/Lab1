@@ -50,7 +50,6 @@ namespace Exercise8
             else if (state == 1)
             {
                 wait1--;
-                textBoxOrientation.Text = wait1.ToString();
                 if (Ay >= 180)
                 {
                     state = 3;
@@ -60,6 +59,7 @@ namespace Exercise8
                 {
                     MessageBox.Show("Jab");
                     state = 0;
+                    wait1 = 0;
                 }
 
             }
@@ -70,6 +70,14 @@ namespace Exercise8
                 {
                     MessageBox.Show("Right-Hook");
                     state = 0;
+                    wait1 = 0;
+                    wait2 = 0;
+                }
+                else if (wait2 == 0)
+                {
+                    state = 0;
+                    wait1 = 0;
+                    wait2 = 0;
                 }
             }
             else if (Az >= 180)
@@ -84,10 +92,12 @@ namespace Exercise8
                 {
                     MessageBox.Show("Uppercut");
                     state = 0;
+                    wait3 = 0;
                 }
                 else if (wait3 == 0)
                 {
                     state = 0;
+                    wait3 = 0;
                 }
             }
             textBoxState.Text = state.ToString();
