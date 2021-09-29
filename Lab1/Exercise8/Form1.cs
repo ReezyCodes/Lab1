@@ -18,7 +18,7 @@ namespace Exercise8
         ConcurrentQueue<Int32> dataQueue = new ConcurrentQueue<Int32>();
         int nextByte;
         SerialPort serialPort1 = new SerialPort();
-        int wait1 = 0, wait2 = 0, wait3 = 0;
+        int wait1 = 0, wait2 = 0, wait3 = 0, wait4 = 0;
         int state;
 
         public Form1()
@@ -43,7 +43,7 @@ namespace Exercise8
             int Ay = Convert.ToInt32(textBoxAy.Text);
             int Az = Convert.ToInt32(textBoxAz.Text);
 
-            if (Ax < 100 && wait1 == 0 && wait2 == 0 && wait3 == 0)
+            if (Ax < 120 && wait1 == 0 && wait2 == 0 && wait3 == 0)
             {
                 state = 1;
                 wait1 = 5;
@@ -61,6 +61,7 @@ namespace Exercise8
                     textBoxState.Text = "Jab";
                     state = 0;
                     wait1 = 0;
+                    wait4 = 20;
                 }
 
             }
@@ -74,6 +75,7 @@ namespace Exercise8
                     wait1 = 0;
                     wait2 = 0;
                     wait3 = 0;
+                    wait4 = 20;
                 }
                 else if (wait2 == 0)
                 {
@@ -83,7 +85,7 @@ namespace Exercise8
                     wait3 = 0;
                 }
             }
-            else if (Ay < 130 && wait1 == 0 && wait2 == 0 && wait3 == 0)
+            else if (Ay < 120 && wait1 == 0 && wait2 == 0 && wait3 == 0)
             {
                 state = 2;
                 wait3 = 5;
@@ -98,6 +100,7 @@ namespace Exercise8
                     wait1 = 0;
                     wait2 = 0;
                     wait3 = 0;
+                    wait4 = 20;
                 }
                 else if (wait3 == 0)
                 {
@@ -107,6 +110,17 @@ namespace Exercise8
                     wait3 = 0;
                 }
             }
+            //else if (state == 0)
+            //{
+            //    wait4--;
+            //    if (wait4 == 0)
+            //    {
+            //        textBoxState.Text = "";
+            //        wait4 = 0;
+            //    }
+
+            //}
+
             textBoxSerialDataStream.AppendText("(" + Ax.ToString() + ", " + Ay.ToString() + ", " + Az.ToString() + ", " + state.ToString() + ")" + ", ");
         }
 

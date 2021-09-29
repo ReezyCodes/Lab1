@@ -1,0 +1,9 @@
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\bin\Release\Exercise4.1.exe.config
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\bin\Release\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\bin\Release\Exercise4.1.pdb
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Release\Exercise8.Form1.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Release\Exercise8.Properties.Resources.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Release\Exercise8.csproj.GenerateResource.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Release\Exercise8.csproj.CoreCompileInputs.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Release\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\Exercise8\obj\Release\Exercise4.1.pdb
