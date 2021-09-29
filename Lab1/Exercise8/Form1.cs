@@ -42,7 +42,8 @@ namespace Exercise8
             int Ax = Convert.ToInt32(textBoxAx.Text);
             int Ay = Convert.ToInt32(textBoxAy.Text);
             int Az = Convert.ToInt32(textBoxAz.Text);
-            if (Ax >= 160 && wait1 == 0 && wait2 == 0 && wait3 == 0)
+
+            if (Ax < 100 && wait1 == 0 && wait2 == 0 && wait3 == 0)
             {
                 state = 1;
                 wait1 = 5;
@@ -50,7 +51,7 @@ namespace Exercise8
             else if (state == 1)
             {
                 wait1--;
-                if (Ay >= 160)
+                if (Ay < 130)
                 {
                     state = 3;
                     wait2 = 5;
@@ -66,7 +67,7 @@ namespace Exercise8
             else if (state == 3)
             {
                 wait2--;
-                if (Az >= 150)
+                if (Az < 130)
                 {
                     textBoxState.Text= "Right-Hook";
                     state = 0;
@@ -82,7 +83,7 @@ namespace Exercise8
                     wait3 = 0;
                 }
             }
-            else if (Ay >= 180 && wait1 == 0 && wait2 == 0 && wait3 == 0)
+            else if (Ay < 130 && wait1 == 0 && wait2 == 0 && wait3 == 0)
             {
                 state = 2;
                 wait3 = 5;
@@ -90,7 +91,7 @@ namespace Exercise8
             else if (state == 2)
             {
                 wait3--;
-                if (Ax >= 150)
+                if (Ax < 100)
                 {
                     textBoxState.Text = "High punch";
                     state = 0;
