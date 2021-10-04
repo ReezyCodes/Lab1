@@ -17,122 +17,20 @@ namespace Exercise8
     {
         ConcurrentQueue<Int32> dataQueue = new ConcurrentQueue<Int32>();
         int nextByte;
-        SerialPort serialPort1 = new SerialPort();
         int wait1 = 0, wait2 = 0, wait3 = 0, wait4 = 0;
         int state;
-
-        public Form1()
-        {
-            InitializeComponent();
-            textBoxAx.Text = "0";
-            textBoxAy.Text = "0";
-            textBoxAz.Text = "0";
-            serialPort1.BaudRate = 9600;
-            serialPort1.PortName = "COM3";
-            serialPort1.DataBits = 8;
-            serialPort1.Handshake = Handshake.None;
-            serialPort1.StopBits = StopBits.One;
-            serialPort1.Open();
-            serialPort1.Write("A");
-        }
+        int Ax = 0;
+        int Ay = 0;
+        int Az = 0;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            serialPort1_DataReceived();
-            int Ax = Convert.ToInt32(textBoxAx.Text);
-            int Ay = Convert.ToInt32(textBoxAy.Text);
-            int Az = Convert.ToInt32(textBoxAz.Text);
-
-            if (Ax < 120 && wait1 == 0 && wait2 == 0 && wait3 == 0)
-            {
-                state = 1;
-                wait1 = 5;
-            }
-            else if (state == 1)
-            {
-                wait1--;
-                if (Ay < 130)
-                {
-                    state = 3;
-                    wait2 = 5;
-                }
-                else if (wait1 == 0)
-                {
-                    textBoxState.Text = "Jab";
-                    state = 0;
-                    wait1 = 0;
-                    wait4 = 20;
-                }
-
-            }
-            else if (state == 3)
-            {
-                wait2--;
-                if (Az < 130)
-                {
-                    textBoxState.Text= "Right-Hook";
-                    state = 0;
-                    wait1 = 0;
-                    wait2 = 0;
-                    wait3 = 0;
-                    wait4 = 20;
-                }
-                else if (wait2 == 0)
-                {
-                    state = 0;
-                    wait1 = 0;
-                    wait2 = 0;
-                    wait3 = 0;
-                }
-            }
-            else if (Ay < 120 && wait1 == 0 && wait2 == 0 && wait3 == 0)
-            {
-                state = 2;
-                wait3 = 5;
-            }
-            else if (state == 2)
-            {
-                wait3--;
-                if (Ax < 100)
-                {
-                    textBoxState.Text = "High punch";
-                    state = 0;
-                    wait1 = 0;
-                    wait2 = 0;
-                    wait3 = 0;
-                    wait4 = 20;
-                }
-                else if (wait3 == 0)
-                {
-                    state = 0;
-                    wait1 = 0;
-                    wait2 = 0;
-                    wait3 = 0;
-                }
-            }
-            //else if (state == 0)
-            //{
-            //    wait4--;
-            //    if (wait4 == 0)
-            //    {
-            //        textBoxState.Text = "";
-            //        wait4 = 0;
-            //    }
-
-            //}
-
-            textBoxSerialDataStream.AppendText("(" + Ax.ToString() + ", " + Ay.ToString() + ", " + Az.ToString() + ", " + state.ToString() + ")" + ", ");
-        }
-
-        private void serialPort1_DataReceived()
-        {
-            int newByte;
             int bytesToRead;
-            bytesToRead = serialPort1.BytesToRead;
-            while (bytesToRead != 0)
+            int newByte;
+            bytesToRead = serialPort2.BytesToRead;
+            while (dataQueue.TryDequeue(out newByte) == true)
             {
-                newByte = serialPort1.ReadByte();
-                dataQueue.Enqueue(Convert.ToInt32(newByte));
+                textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                 //serialDataString = serialDataString + newByte.ToString() + ", ";
                 if (newByte == 255 || nextByte == 0)
                 {
@@ -147,6 +45,7 @@ namespace Exercise8
                         textBoxOrientation.Text = "-X";
                     //textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                     textBoxAx.Text = newByte.ToString();
+                    Ax = newByte;
                     nextByte = 2;
                 }
                 else if (nextByte == 2)
@@ -157,6 +56,7 @@ namespace Exercise8
                         textBoxOrientation.Text = "-Y";
                     //textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                     textBoxAy.Text = newByte.ToString();
+                    Ay = newByte;
                     nextByte = 3;
                 }
                 else if (nextByte == 3)
@@ -167,10 +67,129 @@ namespace Exercise8
                         textBoxOrientation.Text = "-Z";
                     //textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                     textBoxAz.Text = newByte.ToString();
+                    Az = newByte;
                     nextByte = 0;
                 }
-                bytesToRead = serialPort1.BytesToRead;
+
+                if (Ax < 120 && wait1 == 0 && wait2 == 0 && wait3 == 0 && wait4 == 0)
+                {
+                    state = 1;
+                    wait1 = 500;
+                }
+                else if (state == 1)
+                {
+                    wait1--;
+                    if (Ay > 180)
+                    {
+                        state = 3;
+                        wait2 = 500;
+                    }
+                    else if (wait1 == 0)
+                    {
+                        textBoxState.Text = "Jab";
+                        state = 0;
+                        wait1 = 0;
+                        wait4 = 500;
+                    }
+
+                }
+                else if (state == 3)
+                {
+                    wait2--;
+                    if (Az < 100)
+                    {
+                        textBoxState.Text = "Right-Hook";
+                        state = 0;
+                        wait1 = 0;
+                        wait2 = 0;
+                        wait3 = 0;
+                        wait4 = 500;
+                    }
+                    else if (wait2 == 0)
+                    {
+                        state = 0;
+                        wait1 = 0;
+                        wait2 = 0;
+                        wait3 = 0;
+                        wait4 = 0;
+                    }
+                }
+                else if (Ay > 180 && wait1 == 0 && wait2 == 0 && wait3 == 0 && wait4 == 0)
+                {
+                    state = 2;
+                    wait3 = 500;
+                }
+                else if (state == 2)
+                {
+                    wait3--;
+                    if (Ax < 120)
+                    {
+                        textBoxState.Text = "High punch";
+                        state = 0;
+                        wait1 = 0;
+                        wait2 = 0;
+                        wait3 = 0;
+                        wait4 = 500;
+                    }
+                    else if (wait3 == 0)
+                    {
+                        state = 0;
+                        wait1 = 0;
+                        wait2 = 0;
+                        wait3 = 0;
+                        wait4 = 0;
+                    }
+                }
+                else if (state == 0 && wait1 == 0 && wait2 == 0 && wait3 == 0 && wait4 > 0)
+                {
+                    wait4--;
+                    if (wait4 == 0)
+                    {
+                        textBoxState.Text = "";
+                        wait4 = 0;
+                    }
+                    else if (wait4 < 0)
+                        wait4 = 0;
+
+                }
+                textBoxWait1.Text = wait1.ToString();
+                textBoxWait2.Text = wait2.ToString();
+                textBoxWait3.Text = wait3.ToString();
+                textBoxWait4.Text = wait4.ToString();
+
+                //textBoxSerialDataStream.AppendText("(" + Ax.ToString() + ", " + Ay.ToString() + ", " + Az.ToString() + ", " + state.ToString() + ")" + ", ");
             }
-    }
+
+        }
+        private void serialPort2_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            int newByte;
+            int bytesToRead;
+            bytesToRead = serialPort2.BytesToRead;
+            while (bytesToRead != 0)
+            {
+                newByte = serialPort2.ReadByte();
+                //serialDataString = serialDataString + newByte.ToString() + ", ";
+                dataQueue.Enqueue(Convert.ToInt32(newByte));
+                bytesToRead = serialPort2.BytesToRead;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            serialPort2.Open();
+            serialPort2.Write("A");
+        }
+
+        public Form1()
+        {
+            InitializeComponent();
+            textBoxAx.Text = "0";
+            textBoxAy.Text = "0";
+            textBoxAz.Text = "0";
+            
+        }
+
+        
     }
 }
