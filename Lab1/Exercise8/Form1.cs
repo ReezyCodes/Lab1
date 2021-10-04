@@ -16,12 +16,19 @@ namespace Exercise8
     public partial class Form1 : Form
     {
         ConcurrentQueue<Int32> dataQueue = new ConcurrentQueue<Int32>();
+        ConcurrentQueue<Double> AxQueue = new ConcurrentQueue<Double>();
+        ConcurrentQueue<Int32> AyQueue = new ConcurrentQueue<Int32>();
+        ConcurrentQueue<Int32> AzQueue = new ConcurrentQueue<Int32>();
         int nextByte;
         int wait1 = 0, wait2 = 0, wait3 = 0, wait4 = 0;
         int state;
         int Ax = 0;
         int Ay = 0;
         int Az = 0;
+        double sum = 0;
+        string AxOr = "";
+        string AyOr = "";
+        string AzOr = "";
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -31,45 +38,78 @@ namespace Exercise8
             while (dataQueue.TryDequeue(out newByte) == true)
             {
                 textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
-                //serialDataString = serialDataString + newByte.ToString() + ", ";
                 if (newByte == 255 || nextByte == 0)
                 {
-                    //textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
                     nextByte = 1;
                 }
                 else if (nextByte == 1)
                 {
-                    if (newByte > 150)
-                        textBoxOrientation.Text = "+X";
-                    else if (newByte < 105)
-                        textBoxOrientation.Text = "-X";
-                    //textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
+                    if (newByte > 127)
+                        AxOr = "+X";
+                    else if (newByte < 127)
+                        AxOr = "-X";
+                    AxQueue.Enqueue(Convert.ToInt32(newByte));
+                    if (AxQueue.Count > 200)
+                    {
+                        double avgAx;
+                        for (int i = 0; i == 100; i++)
+                        {
+                            AxQueue.TryDequeue(out double Ax1);
+                            sum += Ax1;
+                        }
+                        avgAx = sum / 100;
+                        textBoxAxAvg.Text = avgAx.ToString();
+                    }
                     textBoxAx.Text = newByte.ToString();
                     Ax = newByte;
                     nextByte = 2;
                 }
                 else if (nextByte == 2)
                 {
-                    if (newByte > 150)
-                        textBoxOrientation.Text = "+Y";
-                    else if (newByte < 105)
-                        textBoxOrientation.Text = "-Y";
-                    //textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
+                    if (newByte > 127)
+                        AyOr = "+Y";
+                    else if (newByte < 127)
+                        AyOr = "-Y";
+                    AyQueue.Enqueue(Convert.ToInt32(newByte));
+                    if (AyQueue.Count > 100)
+                    {
+                        double avgAy;
+                        for (int i = 0; i == 100; i++)
+                        {
+                            AyQueue.TryDequeue(out int Ay1);
+                            sum = sum + Ay1;
+                        }
+                        avgAy = sum;
+                        textBoxAyAvg.Text = avgAy.ToString();
+                    }
                     textBoxAy.Text = newByte.ToString();
                     Ay = newByte;
                     nextByte = 3;
                 }
                 else if (nextByte == 3)
                 {
-                    if (newByte > 150)
-                        textBoxOrientation.Text = "+Z";
-                    else if (newByte < 105)
-                        textBoxOrientation.Text = "-Z";
-                    //textBoxSerialDataStream.AppendText(newByte.ToString() + ", ");
+                    if (newByte > 127)
+                        AzOr = "+Z";
+                    else if (newByte < 127)
+                        AzOr = "-Z";
+                    AzQueue.Enqueue(Convert.ToInt32(newByte));
+                    if (AzQueue.Count > 200)
+                    {
+                        double avgAz;
+                        for (int i = 0; i == 100; i++)
+                        {
+                            AzQueue.TryDequeue(out int Az1);
+                            sum += Az1;
+                        }
+                        avgAz = sum / 100;
+                        textBoxAzAvg.Text = avgAz.ToString();
+                    }
                     textBoxAz.Text = newByte.ToString();
                     Az = newByte;
                     nextByte = 0;
                 }
+                textBoxOrientation.Text = "Ax: " + AxOr + " , Ay: " + AyOr + " , Az: " + AzOr;
+
 
                 if (Ax < 120 && wait1 == 0 && wait2 == 0 && wait3 == 0 && wait4 == 0)
                 {
@@ -152,15 +192,9 @@ namespace Exercise8
                         wait4 = 0;
 
                 }
-                textBoxWait1.Text = wait1.ToString();
-                textBoxWait2.Text = wait2.ToString();
-                textBoxWait3.Text = wait3.ToString();
-                textBoxWait4.Text = wait4.ToString();
-
-                //textBoxSerialDataStream.AppendText("(" + Ax.ToString() + ", " + Ay.ToString() + ", " + Az.ToString() + ", " + state.ToString() + ")" + ", ");
             }
-
         }
+
         private void serialPort2_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             int newByte;
@@ -169,9 +203,10 @@ namespace Exercise8
             while (bytesToRead != 0)
             {
                 newByte = serialPort2.ReadByte();
-                //serialDataString = serialDataString + newByte.ToString() + ", ";
                 dataQueue.Enqueue(Convert.ToInt32(newByte));
+                textBoxQueueSize.Text = dataQueue.Count.ToString();
                 bytesToRead = serialPort2.BytesToRead;
+                textBoxSerialBuffer.Text = bytesToRead.ToString();
             }
         }
 

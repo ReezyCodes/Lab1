@@ -1,0 +1,10 @@
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\bin\Debug\Exercise4.1.exe.config
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\bin\Debug\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\bin\Debug\Exercise4.1.pdb
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\obj\Debug\LabExam.csproj.AssemblyReference.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\obj\Debug\LabExam.Form1.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\obj\Debug\LabExam.Properties.Resources.resources
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\obj\Debug\LabExam.csproj.GenerateResource.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\obj\Debug\LabExam.csproj.CoreCompileInputs.cache
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\obj\Debug\Exercise4.1.exe
+C:\Users\Raul Pinzon\source\repos\ReezyCodes\Lab1\Lab1\LabExam\obj\Debug\Exercise4.1.pdb

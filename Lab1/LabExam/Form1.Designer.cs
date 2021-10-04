@@ -1,5 +1,5 @@
 ﻿
-namespace Exercise8
+namespace LabExam
 {
     partial class Form1
     {
@@ -51,6 +51,16 @@ namespace Exercise8
             this.textBoxAxAvg = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxAzMax = new System.Windows.Forms.TextBox();
+            this.textBoxAyMax = new System.Windows.Forms.TextBox();
+            this.textBoxAxMax = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxSerialDataStream
@@ -59,7 +69,7 @@ namespace Exercise8
             this.textBoxSerialDataStream.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxSerialDataStream.Multiline = true;
             this.textBoxSerialDataStream.Name = "textBoxSerialDataStream";
-            this.textBoxSerialDataStream.Size = new System.Drawing.Size(592, 419);
+            this.textBoxSerialDataStream.Size = new System.Drawing.Size(592, 379);
             this.textBoxSerialDataStream.TabIndex = 5;
             // 
             // label4
@@ -146,7 +156,6 @@ namespace Exercise8
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label2
@@ -174,7 +183,7 @@ namespace Exercise8
             // 
             // textBoxQueueSize
             // 
-            this.textBoxQueueSize.Location = new System.Drawing.Point(221, 646);
+            this.textBoxQueueSize.Location = new System.Drawing.Point(215, 606);
             this.textBoxQueueSize.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxQueueSize.Name = "textBoxQueueSize";
             this.textBoxQueueSize.Size = new System.Drawing.Size(102, 31);
@@ -182,7 +191,7 @@ namespace Exercise8
             // 
             // textBoxSerialBuffer
             // 
-            this.textBoxSerialBuffer.Location = new System.Drawing.Point(221, 689);
+            this.textBoxSerialBuffer.Location = new System.Drawing.Point(215, 649);
             this.textBoxSerialBuffer.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxSerialBuffer.Name = "textBoxSerialBuffer";
             this.textBoxSerialBuffer.Size = new System.Drawing.Size(102, 31);
@@ -190,7 +199,7 @@ namespace Exercise8
             // 
             // textBoxAzAvg
             // 
-            this.textBoxAzAvg.Location = new System.Drawing.Point(461, 732);
+            this.textBoxAzAvg.Location = new System.Drawing.Point(455, 692);
             this.textBoxAzAvg.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxAzAvg.Name = "textBoxAzAvg";
             this.textBoxAzAvg.Size = new System.Drawing.Size(163, 31);
@@ -198,7 +207,7 @@ namespace Exercise8
             // 
             // textBoxAyAvg
             // 
-            this.textBoxAyAvg.Location = new System.Drawing.Point(461, 689);
+            this.textBoxAyAvg.Location = new System.Drawing.Point(455, 649);
             this.textBoxAyAvg.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxAyAvg.Name = "textBoxAyAvg";
             this.textBoxAyAvg.Size = new System.Drawing.Size(163, 31);
@@ -206,8 +215,9 @@ namespace Exercise8
             // 
             // textBoxAxAvg
             // 
-            this.textBoxAxAvg.Location = new System.Drawing.Point(461, 646);
+            this.textBoxAxAvg.Location = new System.Drawing.Point(455, 606);
             this.textBoxAxAvg.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxAxAvg.Multiline = true;
             this.textBoxAxAvg.Name = "textBoxAxAvg";
             this.textBoxAxAvg.Size = new System.Drawing.Size(163, 31);
             this.textBoxAxAvg.TabIndex = 30;
@@ -215,7 +225,7 @@ namespace Exercise8
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 649);
+            this.label3.Location = new System.Drawing.Point(27, 609);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 25);
@@ -225,18 +235,123 @@ namespace Exercise8
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 692);
+            this.label8.Location = new System.Drawing.Point(27, 652);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(178, 25);
             this.label8.TabIndex = 34;
             this.label8.Text = "Serial Buffer Size";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(33, 73);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 67);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Connect Serial";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(359, 609);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 25);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Ax G";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(359, 652);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 25);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Ay G";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(359, 695);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 25);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Az G";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(287, 821);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 25);
+            this.label12.TabIndex = 44;
+            this.label12.Text = "Az Min, Max";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(287, 778);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(131, 25);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Ay Min, Max";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(287, 735);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 25);
+            this.label14.TabIndex = 42;
+            this.label14.Text = "Ax Min, Max";
+            // 
+            // textBoxAzMax
+            // 
+            this.textBoxAzMax.Location = new System.Drawing.Point(455, 821);
+            this.textBoxAzMax.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxAzMax.Name = "textBoxAzMax";
+            this.textBoxAzMax.Size = new System.Drawing.Size(163, 31);
+            this.textBoxAzMax.TabIndex = 41;
+            // 
+            // textBoxAyMax
+            // 
+            this.textBoxAyMax.Location = new System.Drawing.Point(455, 778);
+            this.textBoxAyMax.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxAyMax.Name = "textBoxAyMax";
+            this.textBoxAyMax.Size = new System.Drawing.Size(163, 31);
+            this.textBoxAyMax.TabIndex = 40;
+            // 
+            // textBoxAxMax
+            // 
+            this.textBoxAxMax.Location = new System.Drawing.Point(455, 735);
+            this.textBoxAxMax.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxAxMax.Multiline = true;
+            this.textBoxAxMax.Name = "textBoxAxMax";
+            this.textBoxAxMax.Size = new System.Drawing.Size(163, 31);
+            this.textBoxAxMax.TabIndex = 39;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 888);
+            this.ClientSize = new System.Drawing.Size(640, 968);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.textBoxAzMax);
+            this.Controls.Add(this.textBoxAyMax);
+            this.Controls.Add(this.textBoxAxMax);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxAzAvg);
@@ -287,6 +402,16 @@ namespace Exercise8
         private System.Windows.Forms.TextBox textBoxAxAvg;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxAzMax;
+        private System.Windows.Forms.TextBox textBoxAyMax;
+        private System.Windows.Forms.TextBox textBoxAxMax;
     }
 }
 
